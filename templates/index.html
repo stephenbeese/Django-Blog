@@ -17,13 +17,13 @@
                                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
                                     class="card-img-top">
                                 {% else %}
-                                <img src=" {{ post.featured_image.url }}" class="card-img-top">
+                                <img src=" {{ post.featured_image.url }} " class="card-img-top">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link">
+                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt}}</p>
                             </a>
