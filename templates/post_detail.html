@@ -101,9 +101,13 @@
                 <div class="alert alert-success" role="alert">
                     Your comment is awaiting approval
                 </div>
+                    <!-- {% if comment.approved %}
+                    <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                        {{ message | safe }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endif %} -->
                 {% else %}
-
-
 
                 {% if user.is_authenticated %}
                 <h3>Leave a comment:</h3>
